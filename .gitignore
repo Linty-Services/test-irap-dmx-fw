@@ -1,0 +1,8 @@
+__pycache__/
+cosim/
+*.log
+.scannerwork/
+dmx-fw_sonar.bat
+
+.linty/work/
+.vscode/

@@ -1,0 +1,100 @@
+COMM **********************************************************************************************
+COMM   Test: EP command, read register Firmware/Hardware Version and Status with no errors
+COMM **********************************************************************************************
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset activated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 0
+WAIT 80 ns
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 1
+COMM
+COMM ==============================================================================================
+COMM   Wait internal reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WUDI rst 0
+COMM
+COMM ==============================================================================================
+COMM   Read register Firmware/Hardware Version and Status with no errors
+COMM ----------------------------------------------------------------------------------------------
+WCMD R-Fw_Version-XXXX W
+
+WCMD R-Hw_Version-XXXX R
+CCMD R-Status-FFFF W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 1
+CCMD R-Fw_Version-FW_VERSION W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 2
+CCMD R-Hw_Version-0001 W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 4
+CCMD R-Hw_Version-0002 W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 8
+CCMD R-Hw_Version-0004 W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 16
+CCMD R-Hw_Version-0008 W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 31
+CCMD R-Hw_Version-0010 W
+
+WCMD R-Hw_Version-XXXX R
+WNBD 0
+WDIS brd_model(0) 1
+WDIS brd_model(1) 0
+WDIS brd_model(2) 0
+CCMD R-Hw_Version-001F W
+
+WCMD R-Hw_Version-XXXX R
+WDIS brd_model(0) 0
+WDIS brd_model(1) 1
+WDIS brd_model(2) 0
+CCMD R-Hw_Version-0100 W
+
+WCMD R-Hw_Version-XXXX R
+WDIS brd_model(0) 1
+WDIS brd_model(1) 1
+WDIS brd_model(2) 0
+CCMD R-Hw_Version-0200 W
+
+WCMD R-Hw_Version-XXXX R
+WDIS brd_model(0) 0
+WDIS brd_model(1) 0
+WDIS brd_model(2) 1
+CCMD R-Hw_Version-0300 W
+
+WCMD R-Hw_Version-XXXX R
+WDIS brd_model(0) 1
+WDIS brd_model(1) 0
+WDIS brd_model(2) 1
+CCMD R-Hw_Version-0400 W
+
+WCMD R-Hw_Version-XXXX R
+WDIS brd_model(0) 0
+WDIS brd_model(1) 1
+WDIS brd_model(2) 1
+CCMD R-Hw_Version-0500 W
+
+WCMD R-Status-XXXX R
+WDIS brd_model(0) 1
+WDIS brd_model(1) 1
+WDIS brd_model(2) 1
+CCMD R-Hw_Version-0600 W
+
+WCMD R-Status-XXXX R
+CCMD R-Hw_Version-0700 W
+
+WCMD R-Status-XXXX R
+CCMD R-Status-FFFF N

@@ -1,0 +1,709 @@
+COMM **********************************************************************************************
+COMM   Test: AMP SQUID offset mux delay
+COMM **********************************************************************************************
+COMM
+COMM ==============================================================================================
+COMM   Switch ADC voltage on AMP SQUID
+COMM ----------------------------------------------------------------------------------------------
+WDIS sw_adc_vin(0) 1
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset activated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 0
+WAIT 80 ns
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 1
+COMM
+COMM ==============================================================================================
+COMM   Wait internal reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WUDI rst 0
+COMM
+COMM ==============================================================================================
+COMM   Configure AMP SQUID LSB
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_LSB-0CF1 W
+WCMD W-C1_AMP_SQ_OFFSET_LSB-0CF1 W
+WCMD W-C2_AMP_SQ_OFFSET_LSB-0CF1 W
+WCMD W-C3_AMP_SQ_OFFSET_LSB-0CF1 W
+COMM
+COMM ==============================================================================================
+COMM   Send command SQ_AMP_OFFSET_MODE to open loop
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-SQ_AMP_OFFSET_MODE-1111 W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in AMP SQUID lockpoint value column 0 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_FINE(0)-0007 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(1)-0006 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(2)-0005 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(3)-0004 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(4)-0003 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(5)-0002 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(6)-0001 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(7)-0000 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(8)-0007 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(9)-0006 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(10)-0005 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(11)-0004 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(12)-0003 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(13)-0002 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(14)-0001 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(15)-0000 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(16)-0007 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(17)-0006 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(18)-0005 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(19)-0004 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(20)-0003 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(21)-0002 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(22)-0001 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(23)-0000 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(24)-0007 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(25)-0006 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(26)-0005 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(27)-0004 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(28)-0003 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(29)-0002 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(30)-0001 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(31)-0000 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(32)-0000 W
+WCMD W-C0_AMP_SQ_OFFSET_FINE(33)-0000 W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in AMP SQUID lockpoint value column 1 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C1_AMP_SQ_OFFSET_FINE(0)-0007 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(1)-0006 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(2)-0005 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(3)-0004 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(4)-0003 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(5)-0002 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(6)-0001 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(7)-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(8)-0007 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(9)-0006 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(10)-0005 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(11)-0004 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(12)-0003 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(13)-0002 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(14)-0001 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(15)-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(16)-0007 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(17)-0006 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(18)-0005 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(19)-0004 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(20)-0003 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(21)-0002 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(22)-0001 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(23)-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(24)-0007 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(25)-0006 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(26)-0005 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(27)-0004 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(28)-0003 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(29)-0002 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(30)-0001 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(31)-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(32)-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_FINE(33)-0000 W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in AMP SQUID lockpoint value column 0 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C2_AMP_SQ_OFFSET_FINE(0)-0007 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(1)-0006 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(2)-0005 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(3)-0004 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(4)-0003 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(5)-0002 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(6)-0001 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(7)-0000 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(8)-0007 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(9)-0006 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(10)-0005 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(11)-0004 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(12)-0003 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(13)-0002 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(14)-0001 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(15)-0000 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(16)-0007 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(17)-0006 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(18)-0005 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(19)-0004 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(20)-0003 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(21)-0002 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(22)-0001 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(23)-0000 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(24)-0007 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(25)-0006 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(26)-0005 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(27)-0004 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(28)-0003 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(29)-0002 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(30)-0001 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(31)-0000 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(32)-0000 W
+WCMD W-C2_AMP_SQ_OFFSET_FINE(33)-0000 W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in AMP SQUID lockpoint value column 0 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C3_AMP_SQ_OFFSET_FINE(0)-0007 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(1)-0006 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(2)-0005 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(3)-0004 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(4)-0003 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(5)-0002 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(6)-0001 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(7)-0000 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(8)-0007 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(9)-0006 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(10)-0005 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(11)-0004 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(12)-0003 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(13)-0002 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(14)-0001 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(15)-0000 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(16)-0007 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(17)-0006 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(18)-0005 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(19)-0004 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(20)-0003 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(21)-0002 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(22)-0001 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(23)-0000 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(24)-0007 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(25)-0006 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(26)-0005 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(27)-0004 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(28)-0003 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(29)-0002 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(30)-0001 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(31)-0000 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(32)-0000 W
+WCMD W-C3_AMP_SQ_OFFSET_FINE(33)-0000 W
+COMM
+COMM ==============================================================================================
+COMM   Writing memory dump data to compare
+COMM   Formula: round(2^c_SQM_ADC_DATA_S * V_SQA / (2 * g_SQM_ADC_VREF))
+COMM   with V_SQA = g_SQA_DAC_VREF/(2^c_SQA_DAC_DATA_S * c_SQA_DAC_COEF_DIV) *
+COMM            (AMP_SQ_OFFSET_COARSE + AMP_SQ_OFFSET_FINE * AMP_SQ_OFFSET_LSB/2^c_SQA_DAC_MUX_S)
+COMM ----------------------------------------------------------------------------------------------
+WMDC 0 0 0 1828_0000
+WMDC 0 0 1 14B5_0000
+WMDC 0 0 2 1141_0000
+WMDC 0 0 3 0DCE_0000
+WMDC 0 0 4 0A5A_0000
+WMDC 0 0 5 06E7_0000
+WMDC 0 0 6 0373_0000
+WMDC 0 0 7 0000_0000
+WMDC 0 0 8 1828_0000
+WMDC 0 0 9 14B5_0000
+WMDC 0 0 10 1141_0000
+WMDC 0 0 11 0DCE_0000
+WMDC 0 0 12 0A5A_0000
+WMDC 0 0 13 06E7_0000
+WMDC 0 0 14 0373_0000
+WMDC 0 0 15 0000_0000
+WMDC 0 0 16 1828_0000
+WMDC 0 0 17 14B5_0000
+WMDC 0 0 18 1141_0000
+WMDC 0 0 19 0DCE_0000
+WMDC 0 0 20 0A5A_0000
+WMDC 0 0 21 06E7_0000
+WMDC 0 0 22 0373_0000
+WMDC 0 0 23 0000_0000
+WMDC 0 0 24 1828_0000
+WMDC 0 0 25 14B5_0000
+WMDC 0 0 26 1141_0000
+WMDC 0 0 27 0DCE_0000
+WMDC 0 0 28 0A5A_0000
+WMDC 0 0 29 06E7_0000
+WMDC 0 0 30 0373_0000
+WMDC 0 0 31 0000_0000
+WMDC 0 0 32 0000_0000
+WMDC 0 0 33 0000_0000
+COMM
+WMDC 1 0 0 1828_0000
+WMDC 1 0 1 14B5_0000
+WMDC 1 0 2 1141_0000
+WMDC 1 0 3 0DCE_0000
+WMDC 1 0 4 0A5A_0000
+WMDC 1 0 5 06E7_0000
+WMDC 1 0 6 0373_0000
+WMDC 1 0 7 0000_0000
+WMDC 1 0 8 1828_0000
+WMDC 1 0 9 14B5_0000
+WMDC 1 0 10 1141_0000
+WMDC 1 0 11 0DCE_0000
+WMDC 1 0 12 0A5A_0000
+WMDC 1 0 13 06E7_0000
+WMDC 1 0 14 0373_0000
+WMDC 1 0 15 0000_0000
+WMDC 1 0 16 1828_0000
+WMDC 1 0 17 14B5_0000
+WMDC 1 0 18 1141_0000
+WMDC 1 0 19 0DCE_0000
+WMDC 1 0 20 0A5A_0000
+WMDC 1 0 21 06E7_0000
+WMDC 1 0 22 0373_0000
+WMDC 1 0 23 0000_0000
+WMDC 1 0 24 1828_0000
+WMDC 1 0 25 14B5_0000
+WMDC 1 0 26 1141_0000
+WMDC 1 0 27 0DCE_0000
+WMDC 1 0 28 0A5A_0000
+WMDC 1 0 29 06E7_0000
+WMDC 1 0 30 0373_0000
+WMDC 1 0 31 0000_0000
+WMDC 1 0 32 0000_0000
+WMDC 1 0 33 0000_0000
+COMM
+WMDC 2 0 0 1828_0000
+WMDC 2 0 1 14B5_0000
+WMDC 2 0 2 1141_0000
+WMDC 2 0 3 0DCE_0000
+WMDC 2 0 4 0A5A_0000
+WMDC 2 0 5 06E7_0000
+WMDC 2 0 6 0373_0000
+WMDC 2 0 7 0000_0000
+WMDC 2 0 8 1828_0000
+WMDC 2 0 9 14B5_0000
+WMDC 2 0 10 1141_0000
+WMDC 2 0 11 0DCE_0000
+WMDC 2 0 12 0A5A_0000
+WMDC 2 0 13 06E7_0000
+WMDC 2 0 14 0373_0000
+WMDC 2 0 15 0000_0000
+WMDC 2 0 16 1828_0000
+WMDC 2 0 17 14B5_0000
+WMDC 2 0 18 1141_0000
+WMDC 2 0 19 0DCE_0000
+WMDC 2 0 20 0A5A_0000
+WMDC 2 0 21 06E7_0000
+WMDC 2 0 22 0373_0000
+WMDC 2 0 23 0000_0000
+WMDC 2 0 24 1828_0000
+WMDC 2 0 25 14B5_0000
+WMDC 2 0 26 1141_0000
+WMDC 2 0 27 0DCE_0000
+WMDC 2 0 28 0A5A_0000
+WMDC 2 0 29 06E7_0000
+WMDC 2 0 30 0373_0000
+WMDC 2 0 31 0000_0000
+WMDC 2 0 32 0000_0000
+WMDC 2 0 33 0000_0000
+COMM
+WMDC 3 0 0 1828_0000
+WMDC 3 0 1 14B5_0000
+WMDC 3 0 2 1141_0000
+WMDC 3 0 3 0DCE_0000
+WMDC 3 0 4 0A5A_0000
+WMDC 3 0 5 06E7_0000
+WMDC 3 0 6 0373_0000
+WMDC 3 0 7 0000_0000
+WMDC 3 0 8 1828_0000
+WMDC 3 0 9 14B5_0000
+WMDC 3 0 10 1141_0000
+WMDC 3 0 11 0DCE_0000
+WMDC 3 0 12 0A5A_0000
+WMDC 3 0 13 06E7_0000
+WMDC 3 0 14 0373_0000
+WMDC 3 0 15 0000_0000
+WMDC 3 0 16 1828_0000
+WMDC 3 0 17 14B5_0000
+WMDC 3 0 18 1141_0000
+WMDC 3 0 19 0DCE_0000
+WMDC 3 0 20 0A5A_0000
+WMDC 3 0 21 06E7_0000
+WMDC 3 0 22 0373_0000
+WMDC 3 0 23 0000_0000
+WMDC 3 0 24 1828_0000
+WMDC 3 0 25 14B5_0000
+WMDC 3 0 26 1141_0000
+WMDC 3 0 27 0DCE_0000
+WMDC 3 0 28 0A5A_0000
+WMDC 3 0 29 06E7_0000
+WMDC 3 0 30 0373_0000
+WMDC 3 0 31 0000_0000
+WMDC 3 0 32 0000_0000
+WMDC 3 0 33 0000_0000
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0000 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0001 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0002 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0003 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0004 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0005 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0006 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0007 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0008 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0009 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-000A W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-000B W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-000C W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-000D W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-000E W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-000F W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0010 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0011 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0012 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0013 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0014 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0015 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0016 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0017 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0018 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0019 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-001A W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-001B W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a AMP SQUID delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-001C W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-001D W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-001E W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-001F W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03FF W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03FE W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03FD W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03FC W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03FB W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03FA W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03F9 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03F8 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03F7 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03F6 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03F5 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03F4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03F3 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03F2 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03F1 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03F0 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03EF W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03EE W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03ED W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03EC W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03EB W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03EA W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03E9 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03E8 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03E7 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03E6 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03E5 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03E4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03E3 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03E2 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03E1 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-03E0 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-03CB W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-03B6 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-03A1 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-038C W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0377 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0362 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-034D W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0338 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0323 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-030E W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-02F9 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-02E4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-02CF W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-02BA W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-02A5 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0290 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-027B W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0266 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0251 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-023C W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_AMP_SQ_OFFSET_MUX_DELAY-0227 W
+WCMD W-C1_AMP_SQ_OFFSET_MUX_DELAY-0212 W
+WCMD W-C2_AMP_SQ_OFFSET_MUX_DELAY-0200 W
+WCMD W-C3_AMP_SQ_OFFSET_MUX_DELAY-0028 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us

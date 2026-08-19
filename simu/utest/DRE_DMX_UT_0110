@@ -1,0 +1,335 @@
+COMM **********************************************************************************************
+COMM   Test: ADC Dump on science data telemetry
+COMM **********************************************************************************************
+COMM
+COMM ==============================================================================================
+COMM   Enable Science clocks reports display
+COMM ----------------------------------------------------------------------------------------------
+CCPE clk_science_01
+CCPE clk_science_23
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset activated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 0
+WAIT 80 ns
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 1
+COMM
+COMM ==============================================================================================
+COMM   Wait internal reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WUDI rst 0
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 0 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB0(0)-8000 W
+WCMD W-C0_MUX_SQ_FB0(1)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(2)-8000 W
+WCMD W-C0_MUX_SQ_FB0(3)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(4)-8000 W
+WCMD W-C0_MUX_SQ_FB0(5)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(6)-8000 W
+WCMD W-C0_MUX_SQ_FB0(7)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(8)-8000 W
+WCMD W-C0_MUX_SQ_FB0(9)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(10)-8000 W
+WCMD W-C0_MUX_SQ_FB0(11)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(12)-8000 W
+WCMD W-C0_MUX_SQ_FB0(13)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(14)-8000 W
+WCMD W-C0_MUX_SQ_FB0(15)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(16)-8000 W
+WCMD W-C0_MUX_SQ_FB0(17)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(18)-8000 W
+WCMD W-C0_MUX_SQ_FB0(19)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(20)-8000 W
+WCMD W-C0_MUX_SQ_FB0(21)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(22)-8000 W
+WCMD W-C0_MUX_SQ_FB0(23)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(24)-8000 W
+WCMD W-C0_MUX_SQ_FB0(25)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(26)-8000 W
+WCMD W-C0_MUX_SQ_FB0(27)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(28)-8000 W
+WCMD W-C0_MUX_SQ_FB0(29)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(30)-8000 W
+WCMD W-C0_MUX_SQ_FB0(31)-7FFF W
+WCMD W-C0_MUX_SQ_FB0(32)-8000 W
+WCMD W-C0_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 1 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C1_MUX_SQ_FB0(0)-8000 W
+WCMD W-C1_MUX_SQ_FB0(1)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(2)-8000 W
+WCMD W-C1_MUX_SQ_FB0(3)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(4)-8000 W
+WCMD W-C1_MUX_SQ_FB0(5)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(6)-8000 W
+WCMD W-C1_MUX_SQ_FB0(7)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(8)-8000 W
+WCMD W-C1_MUX_SQ_FB0(9)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(10)-8000 W
+WCMD W-C1_MUX_SQ_FB0(11)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(12)-8000 W
+WCMD W-C1_MUX_SQ_FB0(13)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(14)-8000 W
+WCMD W-C1_MUX_SQ_FB0(15)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(16)-8000 W
+WCMD W-C1_MUX_SQ_FB0(17)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(18)-8000 W
+WCMD W-C1_MUX_SQ_FB0(19)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(20)-8000 W
+WCMD W-C1_MUX_SQ_FB0(21)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(22)-8000 W
+WCMD W-C1_MUX_SQ_FB0(23)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(24)-8000 W
+WCMD W-C1_MUX_SQ_FB0(25)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(26)-8000 W
+WCMD W-C1_MUX_SQ_FB0(27)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(28)-8000 W
+WCMD W-C1_MUX_SQ_FB0(29)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(30)-8000 W
+WCMD W-C1_MUX_SQ_FB0(31)-7FFF W
+WCMD W-C1_MUX_SQ_FB0(32)-8000 W
+WCMD W-C1_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 2 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C2_MUX_SQ_FB0(0)-8000 W
+WCMD W-C2_MUX_SQ_FB0(1)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(2)-8000 W
+WCMD W-C2_MUX_SQ_FB0(3)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(4)-8000 W
+WCMD W-C2_MUX_SQ_FB0(5)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(6)-8000 W
+WCMD W-C2_MUX_SQ_FB0(7)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(8)-8000 W
+WCMD W-C2_MUX_SQ_FB0(9)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(10)-8000 W
+WCMD W-C2_MUX_SQ_FB0(11)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(12)-8000 W
+WCMD W-C2_MUX_SQ_FB0(13)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(14)-8000 W
+WCMD W-C2_MUX_SQ_FB0(15)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(16)-8000 W
+WCMD W-C2_MUX_SQ_FB0(17)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(18)-8000 W
+WCMD W-C2_MUX_SQ_FB0(19)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(20)-8000 W
+WCMD W-C2_MUX_SQ_FB0(21)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(22)-8000 W
+WCMD W-C2_MUX_SQ_FB0(23)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(24)-8000 W
+WCMD W-C2_MUX_SQ_FB0(25)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(26)-8000 W
+WCMD W-C2_MUX_SQ_FB0(27)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(28)-8000 W
+WCMD W-C2_MUX_SQ_FB0(29)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(30)-8000 W
+WCMD W-C2_MUX_SQ_FB0(31)-7FFF W
+WCMD W-C2_MUX_SQ_FB0(32)-8000 W
+WCMD W-C2_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 3 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C3_MUX_SQ_FB0(0)-8000 W
+WCMD W-C3_MUX_SQ_FB0(1)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(2)-8000 W
+WCMD W-C3_MUX_SQ_FB0(3)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(4)-8000 W
+WCMD W-C3_MUX_SQ_FB0(5)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(6)-8000 W
+WCMD W-C3_MUX_SQ_FB0(7)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(8)-8000 W
+WCMD W-C3_MUX_SQ_FB0(9)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(10)-8000 W
+WCMD W-C3_MUX_SQ_FB0(11)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(12)-8000 W
+WCMD W-C3_MUX_SQ_FB0(13)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(14)-8000 W
+WCMD W-C3_MUX_SQ_FB0(15)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(16)-8000 W
+WCMD W-C3_MUX_SQ_FB0(17)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(18)-8000 W
+WCMD W-C3_MUX_SQ_FB0(19)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(20)-8000 W
+WCMD W-C3_MUX_SQ_FB0(21)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(22)-8000 W
+WCMD W-C3_MUX_SQ_FB0(23)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(24)-8000 W
+WCMD W-C3_MUX_SQ_FB0(25)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(26)-8000 W
+WCMD W-C3_MUX_SQ_FB0(27)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(28)-8000 W
+WCMD W-C3_MUX_SQ_FB0(29)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(30)-8000 W
+WCMD W-C3_MUX_SQ_FB0(31)-7FFF W
+WCMD W-C3_MUX_SQ_FB0(32)-8000 W
+WCMD W-C3_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing memory dump data to compare
+COMM ----------------------------------------------------------------------------------------------
+WMDC 0 0 0 6000_0000
+WMDC 0 0 1 5FFF_0000
+WMDC 0 0 2 6000_0000
+WMDC 0 0 3 5FFF_0000
+WMDC 0 0 4 6000_0000
+WMDC 0 0 5 5FFF_0000
+WMDC 0 0 6 6000_0000
+WMDC 0 0 7 5FFF_0000
+WMDC 0 0 8 6000_0000
+WMDC 0 0 9 5FFF_0000
+WMDC 0 0 10 6000_0000
+WMDC 0 0 11 5FFF_0000
+WMDC 0 0 12 6000_0000
+WMDC 0 0 13 5FFF_0000
+WMDC 0 0 14 6000_0000
+WMDC 0 0 15 5FFF_0000
+WMDC 0 0 16 6000_0000
+WMDC 0 0 17 5FFF_0000
+WMDC 0 0 18 6000_0000
+WMDC 0 0 19 5FFF_0000
+WMDC 0 0 20 6000_0000
+WMDC 0 0 21 5FFF_0000
+WMDC 0 0 22 6000_0000
+WMDC 0 0 23 5FFF_0000
+WMDC 0 0 24 6000_0000
+WMDC 0 0 25 5FFF_0000
+WMDC 0 0 26 6000_0000
+WMDC 0 0 27 5FFF_0000
+WMDC 0 0 28 6000_0000
+WMDC 0 0 29 5FFF_0000
+WMDC 0 0 30 6000_0000
+WMDC 0 0 31 5FFF_0000
+WMDC 0 0 32 6000_0000
+WMDC 0 0 33 5FFF_0000
+COMM
+WMDC 1 0 0 6000_0000
+WMDC 1 0 1 5FFF_0000
+WMDC 1 0 2 6000_0000
+WMDC 1 0 3 5FFF_0000
+WMDC 1 0 4 6000_0000
+WMDC 1 0 5 5FFF_0000
+WMDC 1 0 6 6000_0000
+WMDC 1 0 7 5FFF_0000
+WMDC 1 0 8 6000_0000
+WMDC 1 0 9 5FFF_0000
+WMDC 1 0 10 6000_0000
+WMDC 1 0 11 5FFF_0000
+WMDC 1 0 12 6000_0000
+WMDC 1 0 13 5FFF_0000
+WMDC 1 0 14 6000_0000
+WMDC 1 0 15 5FFF_0000
+WMDC 1 0 16 6000_0000
+WMDC 1 0 17 5FFF_0000
+WMDC 1 0 18 6000_0000
+WMDC 1 0 19 5FFF_0000
+WMDC 1 0 20 6000_0000
+WMDC 1 0 21 5FFF_0000
+WMDC 1 0 22 6000_0000
+WMDC 1 0 23 5FFF_0000
+WMDC 1 0 24 6000_0000
+WMDC 1 0 25 5FFF_0000
+WMDC 1 0 26 6000_0000
+WMDC 1 0 27 5FFF_0000
+WMDC 1 0 28 6000_0000
+WMDC 1 0 29 5FFF_0000
+WMDC 1 0 30 6000_0000
+WMDC 1 0 31 5FFF_0000
+WMDC 1 0 32 6000_0000
+WMDC 1 0 33 5FFF_0000
+COMM
+WMDC 2 0 0 6000_0000
+WMDC 2 0 1 5FFF_0000
+WMDC 2 0 2 6000_0000
+WMDC 2 0 3 5FFF_0000
+WMDC 2 0 4 6000_0000
+WMDC 2 0 5 5FFF_0000
+WMDC 2 0 6 6000_0000
+WMDC 2 0 7 5FFF_0000
+WMDC 2 0 8 6000_0000
+WMDC 2 0 9 5FFF_0000
+WMDC 2 0 10 6000_0000
+WMDC 2 0 11 5FFF_0000
+WMDC 2 0 12 6000_0000
+WMDC 2 0 13 5FFF_0000
+WMDC 2 0 14 6000_0000
+WMDC 2 0 15 5FFF_0000
+WMDC 2 0 16 6000_0000
+WMDC 2 0 17 5FFF_0000
+WMDC 2 0 18 6000_0000
+WMDC 2 0 19 5FFF_0000
+WMDC 2 0 20 6000_0000
+WMDC 2 0 21 5FFF_0000
+WMDC 2 0 22 6000_0000
+WMDC 2 0 23 5FFF_0000
+WMDC 2 0 24 6000_0000
+WMDC 2 0 25 5FFF_0000
+WMDC 2 0 26 6000_0000
+WMDC 2 0 27 5FFF_0000
+WMDC 2 0 28 6000_0000
+WMDC 2 0 29 5FFF_0000
+WMDC 2 0 30 6000_0000
+WMDC 2 0 31 5FFF_0000
+WMDC 2 0 32 6000_0000
+WMDC 2 0 33 5FFF_0000
+COMM
+WMDC 3 0 0 6000_0000
+WMDC 3 0 1 5FFF_0000
+WMDC 3 0 2 6000_0000
+WMDC 3 0 3 5FFF_0000
+WMDC 3 0 4 6000_0000
+WMDC 3 0 5 5FFF_0000
+WMDC 3 0 6 6000_0000
+WMDC 3 0 7 5FFF_0000
+WMDC 3 0 8 6000_0000
+WMDC 3 0 9 5FFF_0000
+WMDC 3 0 10 6000_0000
+WMDC 3 0 11 5FFF_0000
+WMDC 3 0 12 6000_0000
+WMDC 3 0 13 5FFF_0000
+WMDC 3 0 14 6000_0000
+WMDC 3 0 15 5FFF_0000
+WMDC 3 0 16 6000_0000
+WMDC 3 0 17 5FFF_0000
+WMDC 3 0 18 6000_0000
+WMDC 3 0 19 5FFF_0000
+WMDC 3 0 20 6000_0000
+WMDC 3 0 21 5FFF_0000
+WMDC 3 0 22 6000_0000
+WMDC 3 0 23 5FFF_0000
+WMDC 3 0 24 6000_0000
+WMDC 3 0 25 5FFF_0000
+WMDC 3 0 26 6000_0000
+WMDC 3 0 27 5FFF_0000
+WMDC 3 0 28 6000_0000
+WMDC 3 0 29 5FFF_0000
+WMDC 3 0 30 6000_0000
+WMDC 3 0 31 5FFF_0000
+WMDC 3 0 32 6000_0000
+WMDC 3 0 33 5FFF_0000
+COMM ==============================================================================================
+COMM   Send command SQ_MUX_FB_ON_OFF ON on all channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-SQ_MUX_FB_ON_OFF-1111 W
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WUDI sync 1
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 175 us
+COMM ==============================================================================================
+COMM   Check the science packet type currently transfered
+COMM ----------------------------------------------------------------------------------------------
+CSCP adc_dump

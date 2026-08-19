@@ -1,0 +1,694 @@
+COMM **********************************************************************************************
+COMM   Test: SQUID MUX DAC delay
+COMM **********************************************************************************************
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset activated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 0
+WAIT 80 ns
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 1
+COMM
+COMM ==============================================================================================
+COMM   Wait internal reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WUDI rst 0
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 0 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB0(0)-8000 W
+WCMD W-C0_MUX_SQ_FB0(1)-87C1 W
+WCMD W-C0_MUX_SQ_FB0(2)-8F82 W
+WCMD W-C0_MUX_SQ_FB0(3)-9743 W
+WCMD W-C0_MUX_SQ_FB0(4)-9F04 W
+WCMD W-C0_MUX_SQ_FB0(5)-A6C5 W
+WCMD W-C0_MUX_SQ_FB0(6)-AE86 W
+WCMD W-C0_MUX_SQ_FB0(7)-B647 W
+WCMD W-C0_MUX_SQ_FB0(8)-BE08 W
+WCMD W-C0_MUX_SQ_FB0(9)-C5C9 W
+WCMD W-C0_MUX_SQ_FB0(10)-CD8A W
+WCMD W-C0_MUX_SQ_FB0(11)-D54B W
+WCMD W-C0_MUX_SQ_FB0(12)-DD0C W
+WCMD W-C0_MUX_SQ_FB0(13)-E4CD W
+WCMD W-C0_MUX_SQ_FB0(14)-EC8E W
+WCMD W-C0_MUX_SQ_FB0(15)-F44F W
+WCMD W-C0_MUX_SQ_FB0(16)-FC10 W
+WCMD W-C0_MUX_SQ_FB0(17)-03D1 W
+WCMD W-C0_MUX_SQ_FB0(18)-0B92 W
+WCMD W-C0_MUX_SQ_FB0(19)-1353 W
+WCMD W-C0_MUX_SQ_FB0(20)-1B14 W
+WCMD W-C0_MUX_SQ_FB0(21)-22D5 W
+WCMD W-C0_MUX_SQ_FB0(22)-2A96 W
+WCMD W-C0_MUX_SQ_FB0(23)-3257 W
+WCMD W-C0_MUX_SQ_FB0(24)-3A18 W
+WCMD W-C0_MUX_SQ_FB0(25)-41D9 W
+WCMD W-C0_MUX_SQ_FB0(26)-499A W
+WCMD W-C0_MUX_SQ_FB0(27)-515B W
+WCMD W-C0_MUX_SQ_FB0(28)-591C W
+WCMD W-C0_MUX_SQ_FB0(29)-60DD W
+WCMD W-C0_MUX_SQ_FB0(30)-689E W
+WCMD W-C0_MUX_SQ_FB0(31)-705F W
+WCMD W-C0_MUX_SQ_FB0(32)-7820 W
+WCMD W-C0_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 1 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C1_MUX_SQ_FB0(0)-8000 W
+WCMD W-C1_MUX_SQ_FB0(1)-87C1 W
+WCMD W-C1_MUX_SQ_FB0(2)-8F82 W
+WCMD W-C1_MUX_SQ_FB0(3)-9743 W
+WCMD W-C1_MUX_SQ_FB0(4)-9F04 W
+WCMD W-C1_MUX_SQ_FB0(5)-A6C5 W
+WCMD W-C1_MUX_SQ_FB0(6)-AE86 W
+WCMD W-C1_MUX_SQ_FB0(7)-B647 W
+WCMD W-C1_MUX_SQ_FB0(8)-BE08 W
+WCMD W-C1_MUX_SQ_FB0(9)-C5C9 W
+WCMD W-C1_MUX_SQ_FB0(10)-CD8A W
+WCMD W-C1_MUX_SQ_FB0(11)-D54B W
+WCMD W-C1_MUX_SQ_FB0(12)-DD0C W
+WCMD W-C1_MUX_SQ_FB0(13)-E4CD W
+WCMD W-C1_MUX_SQ_FB0(14)-EC8E W
+WCMD W-C1_MUX_SQ_FB0(15)-F44F W
+WCMD W-C1_MUX_SQ_FB0(16)-FC10 W
+WCMD W-C1_MUX_SQ_FB0(17)-03D1 W
+WCMD W-C1_MUX_SQ_FB0(18)-0B92 W
+WCMD W-C1_MUX_SQ_FB0(19)-1353 W
+WCMD W-C1_MUX_SQ_FB0(20)-1B14 W
+WCMD W-C1_MUX_SQ_FB0(21)-22D5 W
+WCMD W-C1_MUX_SQ_FB0(22)-2A96 W
+WCMD W-C1_MUX_SQ_FB0(23)-3257 W
+WCMD W-C1_MUX_SQ_FB0(24)-3A18 W
+WCMD W-C1_MUX_SQ_FB0(25)-41D9 W
+WCMD W-C1_MUX_SQ_FB0(26)-499A W
+WCMD W-C1_MUX_SQ_FB0(27)-515B W
+WCMD W-C1_MUX_SQ_FB0(28)-591C W
+WCMD W-C1_MUX_SQ_FB0(29)-60DD W
+WCMD W-C1_MUX_SQ_FB0(30)-689E W
+WCMD W-C1_MUX_SQ_FB0(31)-705F W
+WCMD W-C1_MUX_SQ_FB0(32)-7820 W
+WCMD W-C1_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 2 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C2_MUX_SQ_FB0(0)-8000 W
+WCMD W-C2_MUX_SQ_FB0(1)-87C1 W
+WCMD W-C2_MUX_SQ_FB0(2)-8F82 W
+WCMD W-C2_MUX_SQ_FB0(3)-9743 W
+WCMD W-C2_MUX_SQ_FB0(4)-9F04 W
+WCMD W-C2_MUX_SQ_FB0(5)-A6C5 W
+WCMD W-C2_MUX_SQ_FB0(6)-AE86 W
+WCMD W-C2_MUX_SQ_FB0(7)-B647 W
+WCMD W-C2_MUX_SQ_FB0(8)-BE08 W
+WCMD W-C2_MUX_SQ_FB0(9)-C5C9 W
+WCMD W-C2_MUX_SQ_FB0(10)-CD8A W
+WCMD W-C2_MUX_SQ_FB0(11)-D54B W
+WCMD W-C2_MUX_SQ_FB0(12)-DD0C W
+WCMD W-C2_MUX_SQ_FB0(13)-E4CD W
+WCMD W-C2_MUX_SQ_FB0(14)-EC8E W
+WCMD W-C2_MUX_SQ_FB0(15)-F44F W
+WCMD W-C2_MUX_SQ_FB0(16)-FC10 W
+WCMD W-C2_MUX_SQ_FB0(17)-03D1 W
+WCMD W-C2_MUX_SQ_FB0(18)-0B92 W
+WCMD W-C2_MUX_SQ_FB0(19)-1353 W
+WCMD W-C2_MUX_SQ_FB0(20)-1B14 W
+WCMD W-C2_MUX_SQ_FB0(21)-22D5 W
+WCMD W-C2_MUX_SQ_FB0(22)-2A96 W
+WCMD W-C2_MUX_SQ_FB0(23)-3257 W
+WCMD W-C2_MUX_SQ_FB0(24)-3A18 W
+WCMD W-C2_MUX_SQ_FB0(25)-41D9 W
+WCMD W-C2_MUX_SQ_FB0(26)-499A W
+WCMD W-C2_MUX_SQ_FB0(27)-515B W
+WCMD W-C2_MUX_SQ_FB0(28)-591C W
+WCMD W-C2_MUX_SQ_FB0(29)-60DD W
+WCMD W-C2_MUX_SQ_FB0(30)-689E W
+WCMD W-C2_MUX_SQ_FB0(31)-705F W
+WCMD W-C2_MUX_SQ_FB0(32)-7820 W
+WCMD W-C2_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing a new table in feedback open loop column 3 memory
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C3_MUX_SQ_FB0(0)-8000 W
+WCMD W-C3_MUX_SQ_FB0(1)-87C1 W
+WCMD W-C3_MUX_SQ_FB0(2)-8F82 W
+WCMD W-C3_MUX_SQ_FB0(3)-9743 W
+WCMD W-C3_MUX_SQ_FB0(4)-9F04 W
+WCMD W-C3_MUX_SQ_FB0(5)-A6C5 W
+WCMD W-C3_MUX_SQ_FB0(6)-AE86 W
+WCMD W-C3_MUX_SQ_FB0(7)-B647 W
+WCMD W-C3_MUX_SQ_FB0(8)-BE08 W
+WCMD W-C3_MUX_SQ_FB0(9)-C5C9 W
+WCMD W-C3_MUX_SQ_FB0(10)-CD8A W
+WCMD W-C3_MUX_SQ_FB0(11)-D54B W
+WCMD W-C3_MUX_SQ_FB0(12)-DD0C W
+WCMD W-C3_MUX_SQ_FB0(13)-E4CD W
+WCMD W-C3_MUX_SQ_FB0(14)-EC8E W
+WCMD W-C3_MUX_SQ_FB0(15)-F44F W
+WCMD W-C3_MUX_SQ_FB0(16)-FC10 W
+WCMD W-C3_MUX_SQ_FB0(17)-03D1 W
+WCMD W-C3_MUX_SQ_FB0(18)-0B92 W
+WCMD W-C3_MUX_SQ_FB0(19)-1353 W
+WCMD W-C3_MUX_SQ_FB0(20)-1B14 W
+WCMD W-C3_MUX_SQ_FB0(21)-22D5 W
+WCMD W-C3_MUX_SQ_FB0(22)-2A96 W
+WCMD W-C3_MUX_SQ_FB0(23)-3257 W
+WCMD W-C3_MUX_SQ_FB0(24)-3A18 W
+WCMD W-C3_MUX_SQ_FB0(25)-41D9 W
+WCMD W-C3_MUX_SQ_FB0(26)-499A W
+WCMD W-C3_MUX_SQ_FB0(27)-515B W
+WCMD W-C3_MUX_SQ_FB0(28)-591C W
+WCMD W-C3_MUX_SQ_FB0(29)-60DD W
+WCMD W-C3_MUX_SQ_FB0(30)-689E W
+WCMD W-C3_MUX_SQ_FB0(31)-705F W
+WCMD W-C3_MUX_SQ_FB0(32)-7820 W
+WCMD W-C3_MUX_SQ_FB0(33)-7FFF W
+COMM
+COMM ==============================================================================================
+COMM   Writing memory dump data to compare
+COMM ----------------------------------------------------------------------------------------------
+WMDC 0 0 0 2000_0000
+WMDC 0 0 1 21F0_0000
+WMDC 0 0 2 23E0_0000
+WMDC 0 0 3 25D0_0000
+WMDC 0 0 4 27C1_0000
+WMDC 0 0 5 29B1_0000
+WMDC 0 0 6 2BA1_0000
+WMDC 0 0 7 2D91_0000
+WMDC 0 0 8 2F82_0000
+WMDC 0 0 9 3172_0000
+WMDC 0 0 10 3362_0000
+WMDC 0 0 11 3552_0000
+WMDC 0 0 12 3743_0000
+WMDC 0 0 13 3933_0000
+WMDC 0 0 14 3B23_0000
+WMDC 0 0 15 3D13_0000
+WMDC 0 0 16 3F04_0000
+WMDC 0 0 17 00F4_0000
+WMDC 0 0 18 02E4_0000
+WMDC 0 0 19 04D4_0000
+WMDC 0 0 20 06C5_0000
+WMDC 0 0 21 08B5_0000
+WMDC 0 0 22 0AA5_0000
+WMDC 0 0 23 0C95_0000
+WMDC 0 0 24 0E86_0000
+WMDC 0 0 25 1076_0000
+WMDC 0 0 26 1266_0000
+WMDC 0 0 27 1456_0000
+WMDC 0 0 28 1647_0000
+WMDC 0 0 29 1837_0000
+WMDC 0 0 30 1A27_0000
+WMDC 0 0 31 1C17_0000
+WMDC 0 0 32 1E08_0000
+WMDC 0 0 33 1FFF_0000
+COMM
+WMDC 1 0 0 2000_0000
+WMDC 1 0 1 21F0_0000
+WMDC 1 0 2 23E0_0000
+WMDC 1 0 3 25D0_0000
+WMDC 1 0 4 27C1_0000
+WMDC 1 0 5 29B1_0000
+WMDC 1 0 6 2BA1_0000
+WMDC 1 0 7 2D91_0000
+WMDC 1 0 8 2F82_0000
+WMDC 1 0 9 3172_0000
+WMDC 1 0 10 3362_0000
+WMDC 1 0 11 3552_0000
+WMDC 1 0 12 3743_0000
+WMDC 1 0 13 3933_0000
+WMDC 1 0 14 3B23_0000
+WMDC 1 0 15 3D13_0000
+WMDC 1 0 16 3F04_0000
+WMDC 1 0 17 00F4_0000
+WMDC 1 0 18 02E4_0000
+WMDC 1 0 19 04D4_0000
+WMDC 1 0 20 06C5_0000
+WMDC 1 0 21 08B5_0000
+WMDC 1 0 22 0AA5_0000
+WMDC 1 0 23 0C95_0000
+WMDC 1 0 24 0E86_0000
+WMDC 1 0 25 1076_0000
+WMDC 1 0 26 1266_0000
+WMDC 1 0 27 1456_0000
+WMDC 1 0 28 1647_0000
+WMDC 1 0 29 1837_0000
+WMDC 1 0 30 1A27_0000
+WMDC 1 0 31 1C17_0000
+WMDC 1 0 32 1E08_0000
+WMDC 1 0 33 1FFF_0000
+COMM
+WMDC 2 0 0 2000_0000
+WMDC 2 0 1 21F0_0000
+WMDC 2 0 2 23E0_0000
+WMDC 2 0 3 25D0_0000
+WMDC 2 0 4 27C1_0000
+WMDC 2 0 5 29B1_0000
+WMDC 2 0 6 2BA1_0000
+WMDC 2 0 7 2D91_0000
+WMDC 2 0 8 2F82_0000
+WMDC 2 0 9 3172_0000
+WMDC 2 0 10 3362_0000
+WMDC 2 0 11 3552_0000
+WMDC 2 0 12 3743_0000
+WMDC 2 0 13 3933_0000
+WMDC 2 0 14 3B23_0000
+WMDC 2 0 15 3D13_0000
+WMDC 2 0 16 3F04_0000
+WMDC 2 0 17 00F4_0000
+WMDC 2 0 18 02E4_0000
+WMDC 2 0 19 04D4_0000
+WMDC 2 0 20 06C5_0000
+WMDC 2 0 21 08B5_0000
+WMDC 2 0 22 0AA5_0000
+WMDC 2 0 23 0C95_0000
+WMDC 2 0 24 0E86_0000
+WMDC 2 0 25 1076_0000
+WMDC 2 0 26 1266_0000
+WMDC 2 0 27 1456_0000
+WMDC 2 0 28 1647_0000
+WMDC 2 0 29 1837_0000
+WMDC 2 0 30 1A27_0000
+WMDC 2 0 31 1C17_0000
+WMDC 2 0 32 1E08_0000
+WMDC 2 0 33 1FFF_0000
+COMM
+WMDC 3 0 0 2000_0000
+WMDC 3 0 1 21F0_0000
+WMDC 3 0 2 23E0_0000
+WMDC 3 0 3 25D0_0000
+WMDC 3 0 4 27C1_0000
+WMDC 3 0 5 29B1_0000
+WMDC 3 0 6 2BA1_0000
+WMDC 3 0 7 2D91_0000
+WMDC 3 0 8 2F82_0000
+WMDC 3 0 9 3172_0000
+WMDC 3 0 10 3362_0000
+WMDC 3 0 11 3552_0000
+WMDC 3 0 12 3743_0000
+WMDC 3 0 13 3933_0000
+WMDC 3 0 14 3B23_0000
+WMDC 3 0 15 3D13_0000
+WMDC 3 0 16 3F04_0000
+WMDC 3 0 17 00F4_0000
+WMDC 3 0 18 02E4_0000
+WMDC 3 0 19 04D4_0000
+WMDC 3 0 20 06C5_0000
+WMDC 3 0 21 08B5_0000
+WMDC 3 0 22 0AA5_0000
+WMDC 3 0 23 0C95_0000
+WMDC 3 0 24 0E86_0000
+WMDC 3 0 25 1076_0000
+WMDC 3 0 26 1266_0000
+WMDC 3 0 27 1456_0000
+WMDC 3 0 28 1647_0000
+WMDC 3 0 29 1837_0000
+WMDC 3 0 30 1A27_0000
+WMDC 3 0 31 1C17_0000
+WMDC 3 0 32 1E08_0000
+WMDC 3 0 33 1FFF_0000
+COMM ==============================================================================================
+COMM   Send command SQ_MUX_FB_ON_OFF ON on all channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-SQ_MUX_FB_ON_OFF-1111 W
+WUDI sync 0
+WUDI sync 1
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0000 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0001 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0002 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0003 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0004 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0005 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0006 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0007 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0008 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0009 W
+WCMD W-C2_MUX_SQ_FB_DELAY-000A W
+WCMD W-C3_MUX_SQ_FB_DELAY-000B W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-000C W
+WCMD W-C1_MUX_SQ_FB_DELAY-000D W
+WCMD W-C2_MUX_SQ_FB_DELAY-000E W
+WCMD W-C3_MUX_SQ_FB_DELAY-000F W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0010 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0011 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0012 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0013 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0014 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0015 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0016 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0017 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0018 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0019 W
+WCMD W-C2_MUX_SQ_FB_DELAY-001A W
+WCMD W-C3_MUX_SQ_FB_DELAY-001B W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-001C W
+WCMD W-C1_MUX_SQ_FB_DELAY-001D W
+WCMD W-C2_MUX_SQ_FB_DELAY-001E W
+WCMD W-C3_MUX_SQ_FB_DELAY-001F W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03FF W
+WCMD W-C1_MUX_SQ_FB_DELAY-03FE W
+WCMD W-C2_MUX_SQ_FB_DELAY-03FD W
+WCMD W-C3_MUX_SQ_FB_DELAY-03FC W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03FB W
+WCMD W-C1_MUX_SQ_FB_DELAY-03FA W
+WCMD W-C2_MUX_SQ_FB_DELAY-03F9 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03F8 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03F7 W
+WCMD W-C1_MUX_SQ_FB_DELAY-03F6 W
+WCMD W-C2_MUX_SQ_FB_DELAY-03F5 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03F4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03F3 W
+WCMD W-C1_MUX_SQ_FB_DELAY-03F2 W
+WCMD W-C2_MUX_SQ_FB_DELAY-03F1 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03F0 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03EF W
+WCMD W-C1_MUX_SQ_FB_DELAY-03EE W
+WCMD W-C2_MUX_SQ_FB_DELAY-03ED W
+WCMD W-C3_MUX_SQ_FB_DELAY-03EC W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03EB W
+WCMD W-C1_MUX_SQ_FB_DELAY-03EA W
+WCMD W-C2_MUX_SQ_FB_DELAY-03E9 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03E8 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03E7 W
+WCMD W-C1_MUX_SQ_FB_DELAY-03E6 W
+WCMD W-C2_MUX_SQ_FB_DELAY-03E5 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03E4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03E3 W
+WCMD W-C1_MUX_SQ_FB_DELAY-03E2 W
+WCMD W-C2_MUX_SQ_FB_DELAY-03E1 W
+WCMD W-C3_MUX_SQ_FB_DELAY-03E0 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-03CB W
+WCMD W-C1_MUX_SQ_FB_DELAY-03B6 W
+WCMD W-C2_MUX_SQ_FB_DELAY-03A1 W
+WCMD W-C3_MUX_SQ_FB_DELAY-038C W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0377 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0362 W
+WCMD W-C2_MUX_SQ_FB_DELAY-034D W
+WCMD W-C3_MUX_SQ_FB_DELAY-0338 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0323 W
+WCMD W-C1_MUX_SQ_FB_DELAY-030E W
+WCMD W-C2_MUX_SQ_FB_DELAY-02F9 W
+WCMD W-C3_MUX_SQ_FB_DELAY-02E4 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-02CF W
+WCMD W-C1_MUX_SQ_FB_DELAY-02BA W
+WCMD W-C2_MUX_SQ_FB_DELAY-02A5 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0290 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-027B W
+WCMD W-C1_MUX_SQ_FB_DELAY-0266 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0251 W
+WCMD W-C3_MUX_SQ_FB_DELAY-023C W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us
+COMM
+COMM ==============================================================================================
+COMM   Send a SQUID MUX DAC delay on each channels
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-C0_MUX_SQ_FB_DELAY-0227 W
+WCMD W-C1_MUX_SQ_FB_DELAY-0212 W
+WCMD W-C2_MUX_SQ_FB_DELAY-0200 W
+WCMD W-C3_MUX_SQ_FB_DELAY-0028 W
+WUDI sync 0
+WUDI sync 1
+WUDI sync 0
+COMM
+COMM ==============================================================================================
+COMM   Send command DATA_ACQ_MODE, Dump mode
+COMM ----------------------------------------------------------------------------------------------
+WCMD W-DATA_ACQ_MODE-0004 W
+WAIT 182 us

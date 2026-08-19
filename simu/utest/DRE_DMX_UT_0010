@@ -1,0 +1,60 @@
+COMM **********************************************************************************************
+COMM   Test: internal clocks and resets
+COMM **********************************************************************************************
+COMM
+COMM ==============================================================================================
+COMM   Enable internal clock reports display
+COMM ----------------------------------------------------------------------------------------------
+CCPE clk
+CCPE clk_sqm_adc
+CCPE clk_sqm_pls_shape
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset activated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 0
+WAIT 80 ns
+COMM
+COMM ==============================================================================================
+COMM   Asynchronous reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WDIS arst_n 1
+COMM
+COMM ==============================================================================================
+COMM   Wait internal reset deactivated
+COMM ----------------------------------------------------------------------------------------------
+WUDI rst_sqm_adc(0) 0
+COMM
+COMM ==============================================================================================
+COMM   Check internal resets de-assertion synchronization with clk_ref and internal clocks:
+COMM     clk, clk_sqm_adc_acq and clk_sqm_pls_shape
+COMM ----------------------------------------------------------------------------------------------
+CTLE rst == 0 ps
+CTLE rst_sqm_adc(1) == 0 ps
+CTLE rst_sqm_adc(2) == 0 ps
+CTLE rst_sqm_adc(3) == 0 ps
+CTLE rst_sqm_dac(0) == 0 ps
+CTLE rst_sqm_dac(1) == 0 ps
+CTLE rst_sqm_dac(2) == 0 ps
+CTLE rst_sqm_dac(3) == 0 ps
+CTLE rst_sqa_mux(0) == 0 ps
+CTLE rst_sqa_mux(1) == 0 ps
+CTLE rst_sqa_mux(2) == 0 ps
+CTLE rst_sqa_mux(3) == 0 ps
+CTLE clk_ref == 0 ps
+CTLE clk == 0 ps
+CTLE clk_sqm_adc_acq == 0 ps
+CTLE clk_sqm_pls_shape == 0 ps
+CDIS rst 0
+CDIS rst_sqm_adc(1) 0
+CDIS rst_sqm_adc(2) 0
+CDIS rst_sqm_adc(3) 0
+CDIS rst_sqm_dac(0) 0
+CDIS rst_sqm_dac(1) 0
+CDIS rst_sqm_dac(2) 0
+CDIS rst_sqm_dac(3) 0
+CDIS rst_sqa_mux(0) 0
+CDIS rst_sqa_mux(1) 0
+CDIS rst_sqa_mux(2) 0
+CDIS rst_sqa_mux(3) 0
+CDIS clk_ref 1
